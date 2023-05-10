@@ -1,0 +1,48 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'A0721I1'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    runtimeOnly 'mysql:mysql-connector-java'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'com.google.firebase', name: 'firebase-admin', version: '8.1.0'
+
+//    testImplementation 'org.springframework.security:spring-security-test'
+
+    //VinhTQ
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-web
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail'
+    // https://mvnrepository.com/artifact/org.springframework/spring-context-support
+    implementation group: 'org.springframework', name: 'spring-context-support', version: '5.3.12'
+
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    implementation group: 'org.springframework.security', name: 'spring-security-web', version: '5.7.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail'
+//    testImplementation 'org.springframework.security:spring-security-test'
+    // https://mvnrepository.com/artifact/com.paypal.sdk/rest-api-sdk
+    implementation group: 'com.paypal.sdk', name: 'rest-api-sdk', version: '1.14.0'
+
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
